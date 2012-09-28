@@ -19,11 +19,11 @@ module ActiveMerchant #:nodoc:
           end
 
           def gross_cents
-            params[:total_fee].to_f.round
+            params['total_fee'].to_f.round
           end
 
           def success?
-            params[:trade_state] == '0'
+            params['trade_state'] == '0'
           end
         end
       end
