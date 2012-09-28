@@ -6,15 +6,11 @@ The integration patch of tenpay for ActiveMerchant
 
 Add this line to your application's Gemfile:
 
-    gem 'active_merchant_patch_for_tenpay'
+    gem 'active_merchant_patch_for_tenpay', :github => 'gokure/active_merchant_patch_for_tenpay'
 
 And then execute:
 
     $ bundle
-
-Or install it yourself as:
-
-    $ gem install active_merchant_patch_for_tenpay
 
 ## Usage
 
