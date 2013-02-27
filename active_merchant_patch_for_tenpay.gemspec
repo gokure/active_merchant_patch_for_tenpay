@@ -6,7 +6,7 @@ require 'active_merchant_patch_for_tenpay/version'
 Gem::Specification.new do |gem|
   gem.name          = "active_merchant_patch_for_tenpay"
   gem.version       = ActiveMerchantPatchForTenpay::VERSION
-  gem.authors       = ["Gang"]
+  gem.authors       = ["Gang Wu"]
   gem.email         = ["gokure@gmail.com"]
   gem.description   = %q{The integration patch of tenpay for ActiveMerchant}
   gem.summary       = %q{ActiveMerchant patch for Tenpay}

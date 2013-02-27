@@ -1,6 +1,6 @@
+# -*- encoding: utf-8 -*-
 require 'digest/md5'
 require 'cgi'
-
 module ActiveMerchant #:nodoc:
   module Billing #:nodoc:
     module Integrations #:nodoc:
@@ -15,8 +15,6 @@ module ActiveMerchant #:nodoc:
 
           def initialize(order, account, options = {})
             super
-            raise ArgumentError, "`credential2' is requried" unless options[:credential2]
-            Tenpay.secret = options[:credential2]
             add_field 'fee_type',       '1'
             add_field 'input_charset',  'UTF-8'
           end
@@ -32,7 +30,7 @@ module ActiveMerchant #:nodoc:
 
           def signature
             add_field :sign_type, 'MD5'
-            Digest::MD5.hexdigest(CGI.unescape(@fields.to_query + "&key=#{Tenpay.secret}"))
+            Digest::MD5.hexdigest(CGI.unescape(@fields.to_query + "&key=#{Tenpay.secret_key}"))
           end
 
           def form_fields

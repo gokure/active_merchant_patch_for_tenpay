@@ -14,7 +14,11 @@ And then execute:
 
 ## Usage
 
-TODO: Write usage instructions here
+创建`initializers/tenpay.rb`并添加财付通密匙
+
+```ruby
+ActiveMerchant::Billing::Integrations::Tenpay.secret_key = "Your-Secret-Key"
+```
 
 ## Contributing
 
